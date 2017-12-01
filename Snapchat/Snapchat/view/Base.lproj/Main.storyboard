@@ -39,9 +39,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRp-Pa-yWp">
                                 <rect key="frame" x="308" y="239.5" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="rightButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qRl-Su-7dV"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login or Press Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sa-0H-Xui">
                                 <rect key="frame" x="-31" y="297" width="438" height="45"/>
@@ -53,7 +50,7 @@
                                 <rect key="frame" x="30" y="239.5" width="55" height="30"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="leftButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qtW-bu-YBz"/>
+                                    <action selector="signUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UCE-4G-6fc"/>
                                 </connections>
                             </button>
                         </subviews>

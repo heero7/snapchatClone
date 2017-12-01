@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 
 class AuthorizationViewController: UIViewController {
     
@@ -33,12 +33,19 @@ class AuthorizationViewController: UIViewController {
     }
 
     //MARK: Actions
-    @IBAction func leftButtonTapped(_ sender: Any) {
-        
+    @IBAction func signUpTapped(_ sender: Any) {
+        if let email = emailTextField.text {
+            if let password = passwordTextField.text {
+                Auth.auth().createUser(withEmail: email, password: password, completion: {(user, error) in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        print("Succesful sign up")
+                    }
+                })
+            }
+        }
     }
     
     
-    @IBAction func rightButtonTapped(_ sender: Any) {
-       
-    }
 }
