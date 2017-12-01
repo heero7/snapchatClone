@@ -47,5 +47,18 @@ class AuthorizationViewController: UIViewController {
         }
     }
     
+    @IBAction func loginTapped(_ sender: Any) {
+        if let email = emailTextField.text {
+            if let password = passwordTextField.text {
+                Auth.auth().signIn(withEmail: email, password: password, completion: {(user, error) in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        print("Succesful sign up")
+                    }
+                })
+            }
+        }
+    }
     
 }
