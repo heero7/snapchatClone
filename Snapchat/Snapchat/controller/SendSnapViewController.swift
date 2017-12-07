@@ -45,6 +45,7 @@ class SendSnapViewController: UIViewController, UIImagePickerControllerDelegate,
                         print(error)
                     } else {
                         print("Success uploading image")
+                        self.performSegue(withIdentifier: "sendToUsers", sender: nil)
                     }
                 })
             }
