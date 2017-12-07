@@ -17,8 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // here we will setup fire base
-        
         FirebaseApp.configure()
+        
+        // customizing the nav bar
+        //UINavigationBar.appearance().tintColor = UIColor(red: 255, green: 255, blue: 0, alpha: 1)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 255, green: 255, blue: 0, alpha: 1)
+        UINavigationBar.appearance().backgroundColor = UIColor(red: 255, green: 255, blue: 0, alpha: 1)
         return true
     }
 
