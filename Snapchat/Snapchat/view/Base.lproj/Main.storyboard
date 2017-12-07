@@ -86,7 +86,7 @@
                         <outlet property="leftButton" destination="JUF-Zr-dF9" id="CDg-r3-fUb"/>
                         <outlet property="passwordTextField" destination="H4r-fO-Zcr" id="htE-3Y-N9r"/>
                         <outlet property="rightButton" destination="LRp-Pa-yWp" id="HNH-zo-qwS"/>
-                        <segue destination="VPq-zW-7TS" kind="presentation" id="blk-8J-2gl"/>
+                        <segue destination="VPq-zW-7TS" kind="presentation" identifier="authToMySnap" id="blk-8J-2gl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -96,7 +96,7 @@
         <!--My Snapchats-->
         <scene sceneID="nb8-LJ-SPq">
             <objects>
-                <tableViewController id="Gv1-ZX-FWc" sceneMemberID="viewController">
+                <tableViewController id="Gv1-ZX-FWc" customClass="MySnapsTableViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gcS-HE-wj4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Snapchats" id="ctY-UX-lgb">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Dhl-Ad-ofl"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Dhl-Ad-ofl">
+                            <connections>
+                                <action selector="logoutTapped:" destination="Gv1-ZX-FWc" id="5Qo-0X-eun"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QfA-5y-eVv"/>
                     </navigationItem>
                 </tableViewController>
