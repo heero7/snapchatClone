@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.95800306863591178" blue="0.002009753045621232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LRp-Pa-yWp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="3I9-bF-xpe"/>
                             <constraint firstItem="z6q-wJ-zWb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="4Zh-6s-coB"/>
@@ -151,7 +151,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultphoto" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-Qc-0k0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultphoto" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-Qc-0k0">
                                 <rect key="frame" x="10" y="74" width="355" height="271"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OSq-Qc-0k0" secondAttribute="height" multiplier="355:271" id="Wln-A5-0gp"/>
