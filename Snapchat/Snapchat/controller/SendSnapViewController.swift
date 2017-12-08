@@ -15,6 +15,11 @@ class SendSnapViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var snapImageView: UIImageView!
     @IBOutlet weak var snapCaptionTextField: UITextField!
     
+    // image name for firebase
+    var imageName = "\(NSUUID().uuidString).jpeg"
+    // url for firebase
+    var url = ""
+    
     //MARK: Properties
     var imagePicker = UIImagePickerController()
     
@@ -40,12 +45,14 @@ class SendSnapViewController: UIViewController, UIImagePickerControllerDelegate,
         
         if let image = snapImageView.image {
             if let imageData = UIImageJPEGRepresentation(image, 0.1) {
-                imageFolder.child("mySnap.jpeg").putData(imageData, metadata: nil, completion: { (meta, error) in
+                imageFolder.child(imageName).putData(imageData, metadata: nil, completion: { (meta, error) in
                     if let error = error {
                         print(error)
                     } else {
-                        print("Success uploading image")
-                        self.performSegue(withIdentifier: "sendToUsers", sender: nil)
+                        if let imageURL = meta?.downloadURL()?.absoluteString {
+                            self.url = imageURL
+                            self.performSegue(withIdentifier: "sendToUsers", sender: nil)
+                        }
                     }
                 })
             }
@@ -57,5 +64,15 @@ class SendSnapViewController: UIViewController, UIImagePickerControllerDelegate,
             snapImageView.image = image
         }
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let selectUsersVC = segue.destination as? SelectUsersToSendSnapTableViewController {
+            selectUsersVC.imageURL = url
+            if let message = snapCaptionTextField.text {
+                selectUsersVC.caption = message
+            }
+            selectUsersVC.imageName = imageName
+        }
     }
 }

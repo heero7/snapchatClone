@@ -11,6 +11,7 @@
 		8146FF621FD6674C0028CE41 /* MySnapsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146FF611FD6674C0028CE41 /* MySnapsTableViewController.swift */; };
 		8146FF641FD8D5580028CE41 /* SendSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146FF631FD8D5580028CE41 /* SendSnapViewController.swift */; };
 		8146FF661FD8E77E0028CE41 /* SelectUsersToSendSnapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146FF651FD8E77E0028CE41 /* SelectUsersToSendSnapTableViewController.swift */; };
+		8146FF681FDA37780028CE41 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146FF671FDA37780028CE41 /* Snap.swift */; };
 		817972381FCFC788008AFD63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817972371FCFC788008AFD63 /* AppDelegate.swift */; };
 		8179723D1FCFC788008AFD63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8179723B1FCFC788008AFD63 /* Main.storyboard */; };
 		8179723F1FCFC788008AFD63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8179723E1FCFC788008AFD63 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		8146FF611FD6674C0028CE41 /* MySnapsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySnapsTableViewController.swift; sourceTree = "<group>"; };
 		8146FF631FD8D5580028CE41 /* SendSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSnapViewController.swift; sourceTree = "<group>"; };
 		8146FF651FD8E77E0028CE41 /* SelectUsersToSendSnapTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsersToSendSnapTableViewController.swift; sourceTree = "<group>"; };
+		8146FF671FDA37780028CE41 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 		817972341FCFC788008AFD63 /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		817972371FCFC788008AFD63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8179723C1FCFC788008AFD63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				817972371FCFC788008AFD63 /* AppDelegate.swift */,
+				8146FF671FDA37780028CE41 /* Snap.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				8146FF641FD8D5580028CE41 /* SendSnapViewController.swift in Sources */,
 				8146FF661FD8E77E0028CE41 /* SelectUsersToSendSnapTableViewController.swift in Sources */,
 				817972381FCFC788008AFD63 /* AppDelegate.swift in Sources */,
+				8146FF681FDA37780028CE41 /* Snap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

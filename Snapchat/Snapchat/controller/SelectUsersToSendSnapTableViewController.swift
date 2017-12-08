@@ -11,6 +11,10 @@ import FirebaseDatabase
 
 class SelectUsersToSendSnapTableViewController: UITableViewController {
     
+    var imageName = ""
+    var imageURL = ""
+    var caption = ""
+    
     var emails : [String] = []
 
     override func viewDidLoad() {
@@ -38,4 +42,5 @@ class SelectUsersToSendSnapTableViewController: UITableViewController {
         
         return cell
     }
+    
 }
