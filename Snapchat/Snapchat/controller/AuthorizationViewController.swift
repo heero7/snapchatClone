@@ -41,8 +41,10 @@ class AuthorizationViewController: UIViewController {
                     if let error = error {
                         print(error)
                     } else {
-                        
-                        self.performSegue(withIdentifier: "authToMySnap", sender: nil)
+                        if let user = user {
+                            Database.database().reference().child("users").child(user.uid).child("email").setValue(email)
+                            self.performSegue(withIdentifier: "authToMySnap", sender: nil)
+                        }
                     }
                 })
             }
@@ -56,7 +58,6 @@ class AuthorizationViewController: UIViewController {
                     if let error = error {
                         print(error)
                     } else {
-                        
                         self.performSegue(withIdentifier: "authToMySnap", sender: nil)
                     }
                 })
