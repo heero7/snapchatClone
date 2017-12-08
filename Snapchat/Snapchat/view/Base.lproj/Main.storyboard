@@ -139,23 +139,47 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Bf5-j1-S39" kind="show" id="TjZ-py-nTe"/>
+                        <segue destination="Bf5-j1-S39" kind="show" identifier="toSnapView" id="TjZ-py-nTe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIw-WC-9ZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1100" y="101"/>
         </scene>
-        <!--View Controller-->
+        <!--View Snap View Controller-->
         <scene sceneID="NUE-kd-0e3">
             <objects>
-                <viewController id="Bf5-j1-S39" sceneMemberID="viewController">
+                <viewController id="Bf5-j1-S39" customClass="ViewSnapViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DGh-H5-dy7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzX-Oi-gg5">
+                                <rect key="frame" x="12" y="615.5" width="351" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zdn-Ec-ybi">
+                                <rect key="frame" x="12" y="76" width="351" height="511"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iXd-yc-5KO" firstAttribute="trailing" secondItem="Zdn-Ec-ybi" secondAttribute="trailing" constant="12" id="Bna-c7-llo"/>
+                            <constraint firstItem="iXd-yc-5KO" firstAttribute="bottom" secondItem="rzX-Oi-gg5" secondAttribute="bottom" constant="12" id="IXE-1o-lTP"/>
+                            <constraint firstItem="Zdn-Ec-ybi" firstAttribute="top" secondItem="iXd-yc-5KO" secondAttribute="top" constant="12" id="OhS-H9-BLb"/>
+                            <constraint firstItem="iXd-yc-5KO" firstAttribute="trailing" secondItem="rzX-Oi-gg5" secondAttribute="trailing" constant="12" id="VNQ-SA-8ie"/>
+                            <constraint firstItem="rzX-Oi-gg5" firstAttribute="top" secondItem="Zdn-Ec-ybi" secondAttribute="bottom" constant="28.5" id="WM7-ed-C6t"/>
+                            <constraint firstItem="rzX-Oi-gg5" firstAttribute="leading" secondItem="iXd-yc-5KO" secondAttribute="leading" constant="12" id="b3i-is-K5p"/>
+                            <constraint firstItem="Zdn-Ec-ybi" firstAttribute="leading" secondItem="iXd-yc-5KO" secondAttribute="leading" constant="12" id="lRB-lY-pC4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iXd-yc-5KO"/>
                     </view>
+                    <connections>
+                        <outlet property="caption" destination="rzX-Oi-gg5" id="hxd-eM-atM"/>
+                        <outlet property="snapImage" destination="Zdn-Ec-ybi" id="Yjp-MG-oyd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKM-Ag-EyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

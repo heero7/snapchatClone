@@ -46,6 +46,10 @@ class MySnapsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toSnapView", sender: nil)
+    }
+    
     // MARK: Outlet functions
     @IBAction func logoutTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
