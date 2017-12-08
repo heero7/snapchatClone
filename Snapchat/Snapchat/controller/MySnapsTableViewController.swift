@@ -47,7 +47,17 @@ class MySnapsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toSnapView", sender: nil)
+        let snap = snaps[indexPath.row]
+        
+        performSegue(withIdentifier: "toSnapView", sender: snap)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewSnapVC = segue.destination as? ViewSnapViewController {
+            if let snapshot = sender as? DataSnapshot {
+                viewSnapVC.snapshot = snapshot
+            }
+        }
     }
     
     // MARK: Outlet functions
@@ -61,13 +71,7 @@ class MySnapsTableViewController: UITableViewController {
             Database.database().reference().child("users").child(loggedInUser).child("snaps").observe(.childAdded, with: { (snapshot) in
                     self.snaps.append(snapshot)
                     self.tableView.reloadData()
-//                    if let from = snapDictionary["from"] as? String {
-//                        if let imageName = snapDictionary["imageName"] as? String {
-//                            if let imageURL = snapDictionary["imageURL"] as? String {
-//                                if let caption = snapDictionary["message"]
-//                            }
-//                        }
-//                    }
+
             })
         }
         

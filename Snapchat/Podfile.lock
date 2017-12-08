@@ -48,12 +48,16 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - SDWebImage (~> 4.0)
 
 SPEC CHECKSUMS:
   Firebase: 27321a925aa85520618255a7c630859e0502ccbd
@@ -67,7 +71,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   leveldb-library: 4f9eedf84ab46b4fa3b7893bf30714b2a1a74022
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
 
-PODFILE CHECKSUM: e67ff7df9a169aa9fba63e7b054f4a0f61cfbca0
+PODFILE CHECKSUM: b27746d79a760f54b3df15bf7125d79e7985d742
 
 COCOAPODS: 1.1.1
