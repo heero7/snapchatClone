@@ -53,7 +53,12 @@ class SelectUsersToSendSnapTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = users[indexPath.row]
         // access to the current user logged in
-        //Auth.auth().currentUser?.email
+        if let loggedUserEmail = Auth.auth().currentUser?.email {
+            let snapDictionary = ["from":loggedUserEmail, "imageName":imageName, "imageURL":imageURL, "message":caption]
+            Database.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snapDictionary)
+            // go to first nav
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
     
 }
