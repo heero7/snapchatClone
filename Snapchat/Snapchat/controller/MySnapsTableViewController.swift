@@ -11,7 +11,7 @@ import UIKit
 class MySnapsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
-        //makes navigation color blue 
+        //makes navigation color blue
         self.navigationController?.navigationBar.barTintColor = UIColor.blue
         self.navigationController?.navigationBar.tintColor = UIColor.white
         

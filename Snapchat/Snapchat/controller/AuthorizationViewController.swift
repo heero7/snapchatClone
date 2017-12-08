@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class AuthorizationViewController: UIViewController {
     
@@ -40,7 +41,7 @@ class AuthorizationViewController: UIViewController {
                     if let error = error {
                         print(error)
                     } else {
-                        print("Succesful sign up")
+                        
                         self.performSegue(withIdentifier: "authToMySnap", sender: nil)
                     }
                 })
@@ -55,7 +56,7 @@ class AuthorizationViewController: UIViewController {
                     if let error = error {
                         print(error)
                     } else {
-                        print("Succesful login")
+                        
                         self.performSegue(withIdentifier: "authToMySnap", sender: nil)
                     }
                 })
